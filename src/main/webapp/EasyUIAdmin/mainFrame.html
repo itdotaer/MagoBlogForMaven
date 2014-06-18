@@ -1,0 +1,57 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Complex Layout - jQuery EasyUI Demo</title>
+    <link rel="stylesheet" type="text/css" href="themes/default/easyui.css">
+    <link rel="stylesheet" type="text/css" href="themes/icon.css">
+    <link rel="stylesheet" type="text/css" href="demo.css">
+    <script type="text/javascript" src="jquery.min.js"></script>
+    <script type="text/javascript" src="jquery.easyui.min.js"></script>
+
+    <script type="text/javascript">
+        $(function () {
+            $('#tt').tabs({
+                onLoad: function (panel) {
+                    var plugin = panel.panel('options').title;
+                    panel.find('textarea[name="code-' + plugin + '"]').each(function () {
+                        var data = $(this).val();
+                        data = data.replace(/(\r\n|\r|\n)/g, '\n');
+                        if (data.indexOf('\t') == 0) {
+                            data = data.replace(/^\t/, '');
+                            data = data.replace(/\n\t/g, '\n');
+                        }
+                        data = data.replace(/\t/g, '    ');
+                        var pre = $('<pre name="code" class="prettyprint linenums"></pre>').insertAfter(this);
+                        pre.text(data);
+                        $(this).remove();
+                    });
+                    prettyPrint();
+                }
+            });
+        });
+        function open1(plugin,title) {
+            if ($('#tt').tabs('exists', title)) {
+                $('#tt').tabs('select', title);
+            } else {
+                $('#tt').tabs('add', {
+                    title: title,
+                    href: plugin + '.html',
+                    selected:true,
+                    closable: true
+                });
+            }
+        }
+    </script>
+
+</head>
+<body>
+    <div style="margin:20px 0;"></div>
+    <div class="easyui-layout" style="width:auto;height:700px;">
+        <div data-options="region:'north',href:'mainHeader.html'" style="height:50px"></div>
+        <div data-options="region:'south',split:true,href:'mainFooter.html'" style="height:50px;"></div>
+        <div data-options="region:'west',split:true,href:'leftFrame.html'" title="系统管理" style="width:200px;"></div>
+        <div data-options="region:'center',href:'mainContent.html'" style="width: auto;height:700px"></div>
+    </div>
+</body>
+</html>

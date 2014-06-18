@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>LeftFrame</title>
+</head>
+<body>
+    <div class="easyui-accordion" data-options="fit:true,border:false">
+        <div id="leftFrame" title="站点信息" data-options="selected:true">
+            <ul>
+                <li><a href="#" onclick="open1('siteInfo','基本信息')">基本信息</a></li>
+                <li><a href="#" onclick="open1('updateSite','修改站点')">修改站点</a></li>
+            </ul>
+        </div>
+        <div id="leftFrame" title="首页轮播" data-options="selected:true">
+            <ul>
+                <li><a href="#" onclick="open1('siteInfo', '修改轮播')">修改轮播</a></li>
+            </ul>
+        </div>
+        <div id="leftFrame" title="栏目管理">
+            <ul>
+                <li><a href="#" onclick="open1('demo1','栏目一')">栏目一</a></li>
+                <li><a href="#" onclick="open1('demo2','栏目二')">栏目二</a></li>
+            </ul>
+        </div>
+        <div id="leftFrame" title="发布文章">
+            <ul>
+                <li><a href="#" onclick="open1('demo1','新增文章')">新增文章</a></li>
+                <li><a href="#" onclick="open1('demo2','修改文章')">修改文章</a></li>
+                <li><a href="#" onclick="open1('demo2','发布文章')">发布文章</a></li>
+            </ul>
+        </div>
+        <div title="关于作者" data-options="href:'aboutMe.html'"></div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,35 @@
+*{
+	font-size:12px;
+}
+body {
+    font-family:verdana,helvetica,arial,sans-serif;
+    padding:20px;
+    font-size:12px;
+    margin:0;
+}
+h2 {
+    font-size:18px;
+    font-weight:bold;
+    margin:0;
+    margin-bottom:15px;
+}
+.demo-info{
+	padding:0 0 12px 0;
+}
+.demo-tip{
+	display:none;
+}
+#leftFrame{
+	width: 100%;
+	height: 100%;
+	overflow-x: hidden;
+	float: left;
+	background: url(themes/default/images/navbg2.png);
+	position: relative;
+}
+#leftFrame ul{line-height:36px;padding:0px; border:0px; margin-top:10px; background:url(themes/default/images/navbg2.png)}
+#leftFrame li{font-family:"Microsoft YaHei", "Microsoft JhengHei", STHeiti, Georgia, "Times New Roman", Times, serif;color:#333; font-size:13px;width:100%; text-indent:30px;list-style-type:none; line-height:29px;padding:4px 0px;}
+#leftFrame li img{vertical-align:middle;}
+#leftFrame li a{display:block;color:#434343;}
+#leftFrame li a:link{text-decoration:none; color:#434343;}
+#leftFrame li a:hover{ background:url(themes/default/images/navbg.png) no-repeat; color:#FFF;}

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">
+  <display-name>MagoBlog</display-name>
+  <welcome-file-list>
+  	<welcome-file>index.jsp</welcome-file>
+  </welcome-file-list>
+  
+  <servlet>
+  	<servlet-name>action</servlet-name>
+    <servlet-class>org.apache.struts.action.ActionServlet</servlet-class>
+    
+    <load-on-startup>0</load-on-startup>
+  </servlet>
+  
+  <servlet>
+    <servlet-name>InitConfigServlet</servlet-name>
+    <servlet-class>com.mago.web.action.InitConfigServlet</servlet-class>
+    
+    <init-param>
+      <param-name>DB_URL</param-name>
+      <param-value>jdbc:mysql://10.0.16.16:4066/</param-value>
+    </init-param>
+    <init-param>
+      <param-name>DB_NAME</param-name>
+      <param-value>6268099-645728_mysql_gkqdlarc</param-value>
+    </init-param>
+    <init-param>
+      <param-name>Username</param-name>
+      <param-value>ZXzrhIDE</param-value>
+    </init-param>
+    <init-param>
+      <param-name>Password</param-name>
+      <param-value>tNmLFY5bJLJ8</param-value>
+    </init-param>
+    <init-param>
+      <param-name>Connection_Amount</param-name>
+      <param-value>20</param-value>
+    </init-param>
+    <init-param>
+      <param-name>DB_KEEP_ALIVE</param-name>
+      <param-value>5</param-value>
+    </init-param>
+    <init-param>
+      <param-name>Session_Expire_Time</param-name>
+      <param-value>10</param-value>
+    </init-param>    
+    <load-on-startup>1</load-on-startup>
+    
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>action</servlet-name>
+  	<url-pattern>*.do</url-pattern>
+  </servlet-mapping>
+  
+  <servlet-mapping>
+  	<servlet-name>InitConfigServlet</servlet-name>
+  	<url-pattern>/InitConfigServlet</url-pattern>
+  </servlet-mapping>
+  
+</web-app>

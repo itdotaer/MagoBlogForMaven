@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC
+          "-//Apache Software Foundation//DTD Struts Configuration 1.3//EN"
+          "http://struts.apache.org/dtds/struts-config_1_3.dtd">
+
+<struts-config>
+
+    <form-beans>
+    	<form-bean name="userInfo"
+    		type="com.mago.UserInfo"></form-bean>
+    </form-beans>
+    
+    <global-exceptions></global-exceptions>
+    
+    <global-forwards></global-forwards>
+    
+    <action-mappings>
+    	<!--  
+    	<action path="/Admin/login"
+    		input="/Admin/login.jsp"
+    		name="userInfo"
+    		type="cmo.mago.CheckLoginAction">
+    		<forward name="successed" path="/Admin/successed.jsp"></forward>
+    		<forward name="failure" path="/Admin/failure.jsp"></forward>
+    	</action>
+    	-->
+    	<action path="/GetNavAction"
+    		type="com.mago.web.action.GetNavAction">
+    	</action>
+    	<action path="/GetMainServiceAction"
+    		type="com.mago.web.action.GetMainServiceAction">
+    	</action>
+    	<action path="/GetArticleAction"
+    		type="com.mago.web.action.GetArticleAction">
+    	</action>
+    	<action path="/GetListAction"
+    		type="com.mago.web.action.GetListAction">
+    	</action>
+    	<action path="/GetBlogCarouselAction"
+    		type="com.mago.web.action.GetBlogCarouselAction">
+    	</action>
+    	<action path="/GetProjectCarouselAction"
+    		type="com.mago.web.action.GetProjectCarouselAction">
+    	</action>
+    	<action path="/GetNewestArticleAction"
+    		type="com.mago.web.action.GetNewestArticleAction">
+    	</action>
+    	<action path="/GetAdAction"
+    		type="com.mago.web.action.GetAdAction">
+    	</action>
+    </action-mappings>
+
+</struts-config>
